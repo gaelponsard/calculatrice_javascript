@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>calculatrice_javascript</title>
+</head>
+
+<body>
+    <div class="calc">
+        <div id="result"></div>
+        <button id="cinq" value="5">5</button>
+        <button id="deux" value="2">2</button>
+        <button onclick="additionne()">+</button>
+        
+    </div>
+
+
+    <script>
+        function additionne() {
+
+            var terme1 = +document.getElementById("cinq").value;
+            var terme2 = +document.getElementById("deux").value;
+
+            document.getElementById("result").textContent = +(terme1 + terme2);
+
+        }
+    </script>
+    </table>
+</body>
+
+</html>

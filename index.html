@@ -11,23 +11,74 @@
 
 <body>
     <div class="calc">
-        <div id="result"></div>
-        <button id="cinq" value="5">5</button>
-        <button id="deux" value="2">2</button>
-        <button onclick="additionne()">+</button>
-        
+        <button id="sept" value="7" onclick="chiffre(7)">7</button>
+
+        <button id="huit" value="8" onclick="chiffre(8)">8</button>
+
+        <button id="neuf" value="9" onclick="chiffre(9)">9</button>
+
+        <button id="plus" value="+" onclick="additionne()">+</button>
+
+        <button id="quatre" value="4" onclick="chiffre(4)">4</button>
+
+        <button id="cinq" value="5" onclick="chiffre(5)">5</button>
+
+        <button id="six" value="6" onclick="chiffre(6)">6</button>
+
+        <button id="moins" value="-" onclick="soustrait()">-</button>
+
+        <button id="un" value="1" onclick="chiffre(1)">1</button>
+
+        <button id="deux" value="2" onclick="chiffre(2)">2</button>
+
+        <button id="trois" value="3" onclick="chiffre(3)">3</button>
+
+        <button id="fois" value="x" onclick="multiplie()">x</button>
+
+        <button id="egale" value="=" onclick="egale()">=</button>
+
+        <div id="resultat"></div>
     </div>
 
 
     <script>
-        function additionne() {
-
-            var terme1 = +document.getElementById("cinq").value;
-            var terme2 = +document.getElementById("deux").value;
-
-            document.getElementById("result").textContent = +(terme1 + terme2);
-
+        function chiffre(val) {
+            document.getElementById("resultat").innerHTML += val;
         }
+
+        function additionne() {
+            document.getElementById("resultat").innerHTML += "+";
+        }
+
+        function soustrait() {
+            document.getElementById("resultat").innerHTML += "-";
+        }
+
+        function multiplie() {
+            document.getElementById("resultat").innerHTML += "*";
+        }
+
+        function egale() {
+            var egal = eval(document.getElementById('resultat').innerHTML);
+            document.getElementById('resultat').innerHTML = egal;
+        }
+
+
+        /*function additionne() {
+
+            var terme1 = +document.getElementById("n").value;
+            var terme2 = +document.getElementById("n").value;
+
+            document.getElementById("result").textContent = (terme1 + terme2);
+
+        /*function additionne() {
+
+            var terme1 = +document.getElementById("n").value;
+            var terme2 = +document.getElementById("n").value;
+
+            document.getElementById("result").textContent = (terme1 + terme2);
+
+        
     </script>
     </table>
 </body>
